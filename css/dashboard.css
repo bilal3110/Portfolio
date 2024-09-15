@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --nav-clr: #1F2937;
+    --primary-clr: #111827;
+    --secondary-clr: #111827;
+    --third-clr: #4437BB;
+    --white-color: white;
+
+
+    --padding-btn: 10px 25px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: menu;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'menu main main main main main'
+        'footer footer footer footer footer footer';
+    /* gap: 10px; */
+    background-color: var(--primary-clr);
+    /* padding: 10px; */
+}
+
+.header {
+    background-color: var(--nav-clr);
+    /* text-align: center; */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 15px;
+    background: var(--third-clr);
+    padding: var(--padding-btn);
+    border-radius: 10px;
+    transition: 0.5s linear;
+}
+
+.header a:hover {
+    border: 2px solid var(--third-clr);
+    background: transparent;
+}
+
+.sidebar {
+    background-color: var(--third-clr);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 30px 0px;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--white-color);
+    margin-left: 30px;
+}
+
+.sidebar h3::after{
+    content: "";
+    width: 66%;
+    height: 6px;
+    background: var(--white-color);
+    display: block;
+}
+
+.sidebar ul {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 30px;
+    margin-top: 15px;
+
+}
+
+.sidebar ul li {
+    list-style: none;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.main {
+    background-color: var(--primary-clr);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px 30px 30px;
+    gap: 20px;
+}
+
+.welcome {
+    width: 90%;
+    background-color: var(--nav-clr);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.welcome h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.welcome p {
+    font-size: 15px;
+    color: var(--white-color);
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    color: var(--white-color);
+}
+
+td,
+th {
+    border: 1px solid var(--primary-clr);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--nav-clr);
+}
+
+#action-btn{
+    display: flex;
+    gap: 5px;
+}
+
+#t-btn{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 15px;
+    background: var(--third-clr);
+    padding: var(--padding-btn);
+    border-radius: 6px;
+}
+
+.footer {
+    background-color: var(--nav-clr);
+    color: var(--white-color);
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.contact-form{
+    width: 90%;
+    background: var(--nav-clr);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input{
+    border: none;
+    outline: none;
+    background: var(--primary-clr);
+    padding: 6px 2px 6px 8px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+}
+
+form textarea{
+    height: 150px;
+    border: none;
+    outline: none;
+    background: var(--primary-clr);   
+    padding: 6px 2px 6px 8px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    resize: none;
+}
+
+.post-form{
+    width: 90%;
+    background: var(--nav-clr);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.post-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
